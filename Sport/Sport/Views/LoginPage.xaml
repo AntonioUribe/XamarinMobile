@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sport.Views.LoginPage"
+             Shell.PresentationMode="NotAnimated"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Padding="15">
+        <StackLayout.Background>
+            <LinearGradientBrush EndPoint="0,1">
+                <GradientStop Color="#fefeff"
+                          Offset="0.1" />
+                <GradientStop Color="#5be9b3"
+                          Offset="1.0" />
+            </LinearGradientBrush>
+        </StackLayout.Background>
+        <Label Text="Inicio de Sesión" FontSize="25" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" Margin="0,10" />
+
+        <Entry x:Name="Email" Placeholder="Correo electrónico" FontSize="16" BackgroundColor="Transparent" PlaceholderColor="#95000000" TextColor="Black" Margin="0,20" Text="{Binding Email, Mode=TwoWay}" />
+        <Entry x:Name="Password" Placeholder="Contraseña" FontSize="16" BackgroundColor="Transparent" PlaceholderColor="#95000000" IsPassword="True" TextColor="Black" Margin="0,20" Text="{Binding Password, Mode=TwoWay}" />
+        <Button x:Name="btnLogin" Command="{Binding LoginCommand}" Text="Iniciar Sesión" FontSize="18" BackgroundColor="#5be9b3" TextColor="Black" Margin="0,20" />
+
+        <Label Text="¿No tienes una cuenta?" FontSize="16" TextColor="Black" HorizontalOptions="Center" Margin="0,20" />
+
+        <Button x:Name="btnOpenRegister" Clicked="btnOpenRegister_Clicked" Text="Regístrate" FontSize="16" BackgroundColor="Transparent" TextColor="White" />
+    </StackLayout>
+</ContentPage>
